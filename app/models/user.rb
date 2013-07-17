@@ -1,0 +1,4 @@
+class User < ActiveRecord::Base
+  attr_accessible :gender, :hometown, :identifier, :location, :name, :username
+end
+

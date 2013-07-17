@@ -1,0 +1,32 @@
+
+<form action="/users/create" method="get">
+<div>
+<label>Enter Access Token</label>
+<input type="text" name="access_token">
+</div>
+
+<input type="submit" value="Get User"/>
+</form>
+<a target="_blank" href="https://developers.facebook.com/tools/access_token">Get Your Access Token Here</a>
+
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+
+    <th></th>
+
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= link_to 'Show', user %></td>
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+
