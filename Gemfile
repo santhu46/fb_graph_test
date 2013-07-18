@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 
 gem 'omniauth-facebook'
 gem 'fb_graph'
-gem 'mysql2'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,6 +23,12 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+gem 'mysql2'
+end
+group :production do
+gem 'pg'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
